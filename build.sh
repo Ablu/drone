@@ -10,6 +10,8 @@ mkdir -p ~/go/src/github.com/drone/ || exit 1
 export GOPATH=~/go || exit 1
 ln -s $(pwd) ~/go/src/github.com/drone/drone || exit 1
 
+go get -u github.com/jteeuwen/go-bindata/...
+
 export GO15VENDOREXPERIMENT=1
 make deps || exit 1
 make gen || exit 1
