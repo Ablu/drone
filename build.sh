@@ -12,6 +12,12 @@ export PATH="~/go/bin/:$PATH"
 export GOPATH=~/go || exit 1
 ln -s $(pwd) ~/go/src/github.com/drone/drone || exit 1
 
+echo "PATH:"
+echo $PATH
+
+echo "which go-data:"
+which go-bindata
+
 go get -u github.com/jteeuwen/go-bindata/...
 
 export GO15VENDOREXPERIMENT=1
