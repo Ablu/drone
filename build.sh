@@ -7,6 +7,8 @@ sudo tar -C /usr/local -xzf go1.6.2.linux-amd64.tar.gz || exit 1
 export PATH=$PATH:/usr/local/go/bin || exit 1
 
 mkdir -p ~/go/src/github.com/drone/ || exit 1
+mkdir ~/go/bin
+export PATH="~/go/bin/:$PATH"
 export GOPATH=~/go || exit 1
 ln -s $(pwd) ~/go/src/github.com/drone/drone || exit 1
 
