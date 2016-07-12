@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo yum install -y sqlite-devel make wget || exit 1
+sudo yum install -y sqlite-devel make wget git || exit 1
 
 wget https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz || exit 1
 sudo tar -C /usr/local -xzf go1.6.2.linux-amd64.tar.gz || exit 1
