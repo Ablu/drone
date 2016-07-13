@@ -15,10 +15,13 @@ ln -s $(pwd) ~/go/src/github.com/drone/drone || exit 1
 echo "PATH:"
 echo $PATH
 
+go get -u github.com/jteeuwen/go-bindata/... || exit 1
+
 echo "which go-data:"
 which go-bindata
 
-go get -u github.com/jteeuwen/go-bindata/...
+ls --recursive ~/go/
+
 
 export GO15VENDOREXPERIMENT=1
 make deps || exit 1
