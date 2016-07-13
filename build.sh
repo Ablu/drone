@@ -9,6 +9,7 @@ export PATH=$PATH:/usr/local/go/bin || exit 1
 mkdir -p ~/go/src/github.com/drone/ || exit 1
 mkdir ~/go/bin
 export PATH="~/go/bin/:$PATH"
+echo "export PATH=\"~/go/bin/:$PATH\"" >> ~/.bashrc
 export GOPATH=~/go || exit 1
 ln -s $(pwd) ~/go/src/github.com/drone/drone || exit 1
 
